@@ -2,7 +2,7 @@ name: Enhancement
 description: Suggest an enhancement or improvement for the project
 title: "[ENHANCEMENT] "
 labels: "enhancement"
-assignees: ''
+assignees: " "
 
 body:
   - type: markdown
