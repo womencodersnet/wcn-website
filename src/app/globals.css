@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' layer(base);
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --color-grass-green: #84fb9695;
+  --color-wheat: #f2fddf;
+  --color-leafy: #c0f862;
+  --color-olive-green: #195900;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 html,
 body {
@@ -91,7 +120,7 @@ body {
 }
 
 .join-button {
-  @apply bg-indigo-600 hover:bg-indigo-800 font-bold py-2 px-4 rounded my-6 inline-block;
+  @apply bg-indigo-600 hover:bg-indigo-800 font-bold py-2 px-4 rounded-sm my-6 inline-block;
   color: #fff;
 }
 
@@ -104,8 +133,9 @@ body {
 .main-container {
   @apply flex flex-col items-center justify-center min-h-screen w-full;
 }
+
 .formStyle{
-  @apply w-full h-full p-4 my-2 text-start border-2 rounded focus:bg-wheat focus:outline-none focus:border-leafy 
+  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy 
 }
 
 
@@ -126,9 +156,9 @@ body {
     @apply text-sm py-2 px-4;
   }
 
-.signupOpt{
-  @apply w-12 m-4 border-grassGreen border-4 shadow-md rounded-full p-2
-}
+  .signupOpt{
+    @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
+  }
 
   body {
     padding: 10px;
