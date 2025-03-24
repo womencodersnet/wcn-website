@@ -10,7 +10,7 @@ const Signup = () => {
   const discordIcon = "../assets/dicord.png"
   return (
     <div className= 'signup-body'>
-    {/* <Navbar /> */}
+      <Navbar />
       <Starfield
         circleCount={100}
         speedFactor={0.01}

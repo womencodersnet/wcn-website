@@ -9,8 +9,9 @@
 
   --color-grass-green: #84fb9695;
   --color-wheat: #f2fddf;
-  --color-leafy: #c0f862;
+  --color-leafy: #C0F862;
   --color-olive-green: #195900;
+  --color-purple: #402B6D;
 }
 
 /*
@@ -40,6 +41,11 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--color-purple);
+  color: var(--color-leafy);
 }
 
 .landing-body {

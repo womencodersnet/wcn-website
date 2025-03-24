@@ -1,11 +1,12 @@
 import React from "react";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Link from "next/link";
 
 const Home = () => {
   return (
     <div className="main-container landing-body">
-      <div className="content-container">
+      <Navbar />
+      <div className="content-container flex min-h-screen flex-col items-center justify-center p-4 text-center">
         <div className="header">
           <h2 className="title">WCN</h2>
           <p className="subtitle">Women Coders Network</p>
@@ -19,7 +20,7 @@ const Home = () => {
             Women Coders Network is uniting communities to empower women and gender minorities in technology worldwide.
             </p>
           </section>
-          <section>
+          <section className="w-dvh">
             <h3 className="section-header">What{'\''}s Happening?</h3>
             <p className="info">
               🚧 We{'\''}re Getting Ready! Our website is currently under
