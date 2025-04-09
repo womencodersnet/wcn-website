@@ -58,7 +58,7 @@ We welcome contributions from everyone!
 
 You can find all of our open issues, in progress issues, and completed issues here on our [project board](https://github.com/orgs/womencodersnet/projects/1)
 
-If you would like to contribute to the WCN project, please reach out to [@sunsplat on GitHub](https://github.com/sunsplat) or [@msesun on Discord](https://discord.gg/YpaJ3JckNM) to get added to the website team!
+If you would like to contribute to the WCN project, fill out [our application](https://forms.gle/jJMPn3TptEkofyMY8) and reach out to [@sunsplat on GitHub](https://github.com/sunsplat) or [@msesun on Discord](https://discord.gg/YpaJ3JckNM) to get added to the website team!
 
 Please follow these steps for contributing:
 
@@ -76,3 +76,8 @@ Please follow these steps for contributing:
    - ie: `git commit -m "TASK-18 updating readme to include list of technologies"`
 4. Push your changes to your branch.
 5. Open a pull request to the dev branch.
+
+
+## Resources
+
+See [here](/docs/WCN_LINKS.md) for more project resources and important links
