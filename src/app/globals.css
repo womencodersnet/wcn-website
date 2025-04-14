@@ -9,7 +9,7 @@
 
   --color-grass-green: #84fb9695;
   --color-wheat: #f2fddf;
-  --color-leafy: #c0f862;
+  --color-leafy: #C0F862;
   --color-olive-green: #195900;
   --color-dark-violet:#402B6D;
 
@@ -40,9 +40,14 @@ body {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-main);
   margin: 0;
   overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--color-dark-violet);
+  color: var(--color-leafy);
 }
 
 .landing-body {

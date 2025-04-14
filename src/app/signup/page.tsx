@@ -1,16 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Starfield from '../components/Starfield';
-
 
 const Signup = () => {
   const googleIcon = "../assets/google.png"
   const discordIcon = "../assets/dicord.png"
   return (
-    <div className= 'signup-body'>
-    {/* <Navbar /> */}
+    <div className="signup-body">
+      <Navbar />
       <Starfield
         circleCount={100}
         speedFactor={0.01}

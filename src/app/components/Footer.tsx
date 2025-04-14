@@ -1,10 +1,12 @@
 import React from 'react';
-import { IoMdMail } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
+import { IoMdMail } from 'react-icons/io';
+import { FaLinkedin } from 'react-icons/fa';
 
 const year = new Date().getFullYear();
 
 const Footer: React.FC = () => {
+
+  const email = 'womencodersnetwork@gmail.com';
   return (
     <footer className='w-full p-10 bg-dark-violet text-leafy font-main'>
         <div className='flex justify-between max-[640px]:flex-col'>
@@ -16,12 +18,12 @@ const Footer: React.FC = () => {
                 <a className='flex gap-2 items-center' href="mailto:womencodersnetwork@gmail.com">
                     <IoMdMail />  womencodersnetwork@gmail.com
                 </a>
-                <a className='flex gap-2 items-center' href="https://www.linkedin.com/company/womencodersnet/" target='_blank' rel='noreferrer'>
+                <a className="flex gap-2 items-center" href="https://www.linkedin.com/company/womencodersnet/" target="_blank" rel="noreferrer">
                     <FaLinkedin /> WCN Linkedin
                 </a>
             </div>
         </div> 
-      <p className='relative bottom-[-2em] text-center'>&copy; All rights reserved. Women Coders Network {year}</p>
+      <p className="relative bottom-[-2em] text-center">&copy; All rights reserved. Women Coders Network {year}</p>
     </footer>
   );
 };
