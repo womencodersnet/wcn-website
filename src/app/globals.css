@@ -40,13 +40,13 @@ body {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-main);
   margin: 0;
   overflow-x: hidden;
 }
 
 nav {
-  background-color: var(--color-purple);
+  background-color: var(--color-dark-violet);
   color: var(--color-leafy);
 }
 
