@@ -1,5 +1,5 @@
 name: Task
-description: Suggest an improvement to the current feature
+description: Dev cleanup, maintainence, or administrative tasks
 title: "[TASK] "
 labels: "task"
 
