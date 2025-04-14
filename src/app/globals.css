@@ -11,7 +11,9 @@
   --color-wheat: #f2fddf;
   --color-leafy: #C0F862;
   --color-olive-green: #195900;
-  --color-purple: #402B6D;
+  --color-dark-violet:#402B6D;
+
+  --font-main: 'Roboto Mono', monospace;
 }
 
 /*
