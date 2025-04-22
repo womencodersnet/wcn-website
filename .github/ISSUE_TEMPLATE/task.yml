@@ -1,14 +1,14 @@
-name: Enhancement
-description: Suggest an enhancement or improvement for the project
-title: "[ENHANCEMENT] "
-labels: "enhancement"
+name: Task
+description: Dev cleanup, maintainence, or administrative tasks
+title: "[TASK] "
+labels: "task"
 
 
 body:
   - type: markdown
     attributes:
       value: |
-        <!--- Provide a general summary of the enhancement in the Title above -->
+        <!--- Provide a general summary of the task in the Title above -->
 
   - type: input
     id: current_behavior
@@ -28,5 +28,5 @@ body:
     id: additional_context
     attributes:
       label: Additional Context
-      description: Add any other context or screenshots about the enhancement here
+      description: Add any other context or screenshots about the task here
       placeholder: Provide additional context here
