@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
                 <h3 className="text-2xl font-bold">Contact Us</h3>
                 <a className="flex gap-2 items-center" href={`mailto:${email}`}>
                     <IoMdMail /> { email }
+
                 </a>
                 <a className="flex gap-2 items-center" href="https://www.linkedin.com/company/womencodersnet/" target="_blank" rel="noreferrer">
                     <FaLinkedin /> WCN Linkedin
