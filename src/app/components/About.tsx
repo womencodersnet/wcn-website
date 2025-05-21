@@ -1,8 +1,6 @@
 import React from 'react';
 
 const About = () => {
-
-  const email = 'womencodersnetwork@gmail.com';
   return (
     <section className='flex flex-col items-center gap-4 mb-4'>
         <h3 className='text-3xl font-bold'>About Us</h3>
