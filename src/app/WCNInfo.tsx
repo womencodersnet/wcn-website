@@ -10,9 +10,3 @@ export const WCNInfo: WCNInfoProps = {
     linkedIn: "https://www.linkedin.com/company/womencodersnet/",
     year: new Date().getFullYear(),
 };
-
-
-
-
-
-
