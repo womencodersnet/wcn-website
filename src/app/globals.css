@@ -11,7 +11,7 @@
   --color-wheat: #f2fddf;
   --color-leafy: #C0F862;
   --color-olive-green: #195900;
-  --color-dark-violet:#402B6D;
+  --color-dark-violet: #402B6D;
 
   --font-main: 'Roboto Mono', monospace;
 }
@@ -34,15 +34,8 @@
   }
 }
 
-html,
-body {
-  @apply min-h-screen min-w-full m-0 p-0;
-}
-
 body {
   font-family: var(--font-main);
-  margin: 0;
-  overflow-x: hidden;
 }
 
 nav {
@@ -74,29 +67,7 @@ nav {
 }
 
 .section-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.title {
-  font-size: 4.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat", sans-serif;
-}
-
-.subtitle {
-  font-size: 2.5rem;
-  font-weight: lighter;
-  color: #ccc;
-  margin-bottom: 18px;
-  font-family: "Montserrat", sans-serif;
+  @apply mb-5 text-2xl tracking-wide font-bold;
 }
 
 .hr-line {
@@ -107,22 +78,6 @@ nav {
   margin: 15px 0;
 }
 
-.content-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-content {
-  padding: 20px;
-}
-
 .info {
   margin-bottom: 20px;
 }
@@ -130,16 +85,6 @@ nav {
 .join-button {
   @apply bg-indigo-600 hover:bg-indigo-800 font-bold py-2 px-4 rounded-sm my-6 inline-block;
   color: #fff;
-}
-
-.title,
-.subtitle,
-.section-header {
-  color: #fff;
-}
-
-.main-container {
-  @apply flex flex-col items-center justify-center min-h-screen w-full;
 }
 
 .formStyle{
@@ -166,9 +111,5 @@ nav {
 
   .signupOpt{
     @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
-  }
-
-  body {
-    padding: 10px;
   }
 }

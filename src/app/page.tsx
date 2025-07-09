@@ -14,14 +14,14 @@ const Home = () => {
           <hr className="hr-line" />
         </div>
 
-        <main className="main-content">
+        <main className="main-content w-full">
           <section>
             <h3 className="section-header">Who Are We?</h3>
             <p className="info">
             Women Coders Network is uniting communities to empower women and gender minorities in technology worldwide.
             </p>
           </section>
-          <section className="w-dvh">
+          <section>
             <h3 className="section-header">What{'\''}s Happening?</h3>
             <p className="info">
               🚧 We{'\''}re Getting Ready! Our website is currently under
