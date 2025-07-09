@@ -1,12 +1,14 @@
 import React from 'react';
 import { IoMdMail } from 'react-icons/io';
 import { FaLinkedin } from 'react-icons/fa';
-
-const year = new Date().getFullYear();
+import { WCNInfo } from '../WCNInfo';
 
 const Footer: React.FC = () => {
 
-  const email = 'womencodersnetwork@gmail.com';
+  const year = WCNInfo.year;
+  const email = WCNInfo.email;
+  const linkedIn = WCNInfo.linkedIn;
+
   return (
     <footer className="w-full p-10 bg-dark-violet text-leafy font-main">
         <div className="flex items-center justify-around max-[640px]:flex-col">
@@ -19,7 +21,7 @@ const Footer: React.FC = () => {
                     <IoMdMail /> { email }
 
                 </a>
-                <a className="flex gap-2 items-center" href="https://www.linkedin.com/company/womencodersnet/" target="_blank" rel="noreferrer">
+                <a className="flex gap-2 items-center" href={linkedIn} target="_blank" rel="noreferrer">
                     <FaLinkedin /> WCN Linkedin
                 </a>
             </div>
