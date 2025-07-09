@@ -9,7 +9,7 @@ const Home = () => {
       <Navbar />
       <div className="content-container flex min-h-screen flex-col items-center justify-center p-4 text-center">
         <div className="header">
-          <h2 className="title">WCN</h2>
+          <h2 className="title text-7xl font-bold text-white">WCN</h2>
           <p className="subtitle">Women Coders Network</p>
           <hr className="hr-line" />
         </div>

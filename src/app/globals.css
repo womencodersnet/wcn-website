@@ -54,6 +54,10 @@ nav {
   color: #fff;
 }
 
+.title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .signup-body {
   color: rgb(var(--foreground-rgb));
   padding: 20px;
