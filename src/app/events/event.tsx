@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Event = ({ location, startTime, endTime, link, title }) => {
+const Event = ({ location, startTime, endTime, link, title }: { location: string, startTime: string, endTime: string, link: string, title: string }) => {
 
   const eventStartDate = new Date(startTime);
   const eventEndDate = new Date(endTime);
