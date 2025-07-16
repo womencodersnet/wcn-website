@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 const Home = () => {
   return (
@@ -13,14 +14,14 @@ const Home = () => {
           <p className="subtitle">Women Coders Network</p>
           <hr className="hr-line" />
         </div>
-
         <main className="main-content w-full">
-          <section>
+          <About />
+          {/* <section>
             <h3 className="section-header">Who Are We?</h3>
             <p className="info">
             Women Coders Network is uniting communities to empower women and gender minorities in technology worldwide.
             </p>
-          </section>
+          </section> */}
           <section>
             <h3 className="section-header">What{'\''}s Happening?</h3>
             <p className="info">
