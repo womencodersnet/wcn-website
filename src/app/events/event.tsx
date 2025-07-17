@@ -10,6 +10,7 @@ const Event = ({ location, startTime, endTime, link, title }: { location: string
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
+    timeZoneName: 'short'
   };
   const formatter = new Intl.DateTimeFormat('en-US', options);
   const formattedStartDate = formatter.format(eventStartDate);
