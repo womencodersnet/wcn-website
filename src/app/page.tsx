@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Link from 'next/link';
 import Footer from './components/Footer';
 import { getUpcomingEvents } from '@/api/calendar';
+import About from './components/About';
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -35,23 +36,17 @@ const Home = () => {
     );
   }
   return (
-    <div className="main-container landing-body">
+    <div className="main-container landing-body font-main">
       <Navbar />
-      <div className="flex text-white min-h-screen flex-col items-center justify-center p-4 text-center">
-        <div className="text-center">
-          <h1 className="text-7xl text-white">WCN</h1>
+      <div className="content-container flex min-h-screen flex-col items-center justify-center p-4 text-center">
+        <div className="header">
+          <h2 className="title text-7xl font-bold text-white">WCN</h2>
           <p className="subtitle">Women Coders Network</p>
           <hr className="hr-line" />
         </div>
-
-        <main className="main-content">
-          <div>
-            <h3 className="section-header">Who Are We?</h3>
-            <p className="info">
-            Women Coders Network is uniting communities to empower women and gender minorities in technology worldwide.
-            </p>
-          </div>
-          <section>
+        <main>
+          <About />
+          <section className="mx-auto md:w-1/2">
             <h3 className="section-header">What{'\''}s Happening?</h3>
             <p className="info">
               🚧 We{'\''}re Getting Ready! Our website is currently under
@@ -63,7 +58,7 @@ const Home = () => {
               the launch of something great!
             </p>
           </section>
-          <section>
+          <section className="mx-auto md:w-1/2">
             <h3 className="section-header">Get Connected!</h3>
             <p className="info">
               Join our Discord community! Connect with fellow women in tech,

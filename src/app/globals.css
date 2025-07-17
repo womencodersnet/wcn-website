@@ -54,6 +54,10 @@ nav {
   color: #fff;
 }
 
+.title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .signup-body {
   color: rgb(var(--foreground-rgb));
   padding: 20px;
@@ -111,9 +115,5 @@ nav {
 
   .signupOpt{
     @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
-  }
-
-  body {
-    padding: 10px;
   }
 }

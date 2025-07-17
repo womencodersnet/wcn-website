@@ -11,10 +11,8 @@ const Events = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('fetch data');
       try {
         const response = await getUpcomingEvents();
-        console.log('events', response);
         setEvents(response.items);
       } finally {
         setLoading(false);
@@ -38,13 +36,13 @@ const Events = () => {
   return (
     <div className="landing-body">
       <Navbar />
-      <main className="min-h-screen text-leafy p-4 md:p-8">
-      <h1 className="text-3xl font-bold text-grass-green mb-6 text-center">Join our events</h1>
-      <p className="text-lg text-center mb-12">
-        <a href="https://calendar.google.com/calendar/u/0/embed?src=7bd85d9630b008f805dfb8ac4e76bc7475c5a84b03ee80674d56beb9a461fd02@group.calendar.google.com&ctz=America/Los_Angeles&pli=1">Subscribe to our events calendar</a> to stay updated about community events.
-      </p>
-      <div className="max-w-4xl mx-auto">
-        {events && events.map(({ id, location, start, end, htmlLink, summary }) => <Event location={location} startTime={start.dateTime} endTime={end.dateTime} link={htmlLink} title={summary} key={id} />)}
+      <main className="min-h-screen p-4 md:p-8">
+        <h1 className="text-3xl font-bold text-white mb-6 text-center">Join our events</h1>
+        <p className="text-lg text-center mb-12">
+          <a href="https://calendar.google.com/calendar/u/0/embed?src=7bd85d9630b008f805dfb8ac4e76bc7475c5a84b03ee80674d56beb9a461fd02@group.calendar.google.com&ctz=America/Los_Angeles&pli=1">Subscribe to our events calendar</a> to stay updated about community events.
+        </p>
+        <div className="max-w-4xl mx-auto">
+          {events && events.map(({ id, location, start, end, htmlLink, summary }: { id: string, location: string, start: { dateTime: string }, end: { dateTime: string }, htmlLink: string, summary: string }) => <Event location={location} startTime={start.dateTime} endTime={end.dateTime} link={htmlLink} title={summary} key={id} />)}
         </div>
       </main>
     </div>
