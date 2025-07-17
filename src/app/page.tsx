@@ -6,17 +6,34 @@ import Footer from './components/Footer';
 import { getUpcomingEvents } from '@/api/calendar';
 import About from './components/About';
 
+const convertDateToGoogleFormat = (date: string) => {
+  return new Date(date).toISOString().replace(/[-/.:]+/g, '');
+};
+
+const formatToLocalTimeZone = (date: string) => {
+  const eventDate = new Date(date);
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short'
+  };
+  const formatter = new Intl.DateTimeFormat('en-US', options);
+  return formatter.format(eventDate);
+}
+
 const Home = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('fetch data');
       try {
         const response = await getUpcomingEvents();
         console.log('events', response);
-        setEvents(response.items.slice(0, 2));
+        setEvents(response.items.slice(0, 3)); // only show first 3 events
       } finally {
         setLoading(false);
       }
@@ -69,42 +86,27 @@ const Home = () => {
               <div className="join-button">Join Our Discord</div>
             </Link>
           </section>
-          <section>
-            <h3 className="section-header">Events</h3>
-            <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-2 place-items-center align-center">
-              <div
-                className="m-4 block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
-                <div className="p-6">
-                  <h5
-                    className="mb-2 text-xl font-medium leading-tight">
-                    {events[0].summary}
-                  </h5>
-                  <p className="mb-4 text-base">
-                    With supporting text below as a natural lead-in to additional
-                    content.
-                  </p>
-                  <a href="#" className="bg-leafy hover:bg-grass-green text-dark-violet font-bold py-2 px-4 rounded">
-                    Join Us!
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-                <div className="p-6">
-                  <h5
-                    className="mb-2 text-xl font-medium leading-tight">
-                    {events[0].summary}
-                  </h5>
-                  <p className="mb-4 text-base">
-                    With supporting text below as a natural lead-in to additional
-                    content.
-                  </p>
-                  <a href="#" className="bg-leafy hover:bg-grass-green text-dark-violet font-bold py-2 px-4 rounded">
-                    Join Us!
-                  </a>
-                </div>
-              </div>
+          <section className="mx-auto lg:w-3/4">
+            <h3 className="section-header">Upcoming Events</h3>
+            <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-3 place-items-center align-center">
+              { events && events.map( ({ end, start, location, summary }, index ) => {
+                const link = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=${convertDateToGoogleFormat(start.dateTime)}/${convertDateToGoogleFormat(end.dateTime)}&text=${summary}&location=${location}&ctz=${start.timeZone}`;
+                return (
+                  <div key={index} className="m-4 block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
+                    <div className="p-6">
+                      <h5 className="mb-6 text-xl font-bold leading-tight">
+                        { summary }
+                      </h5>
+                      <p className="mb-6">
+                        Time: { formatToLocalTimeZone(start.dateTime) } - { formatToLocalTimeZone(end.dateTime) }
+                      </p>
+                      <a href={ link } rel="noreferer noopener" target="_blank" className="bg-leafy hover:bg-grass-green text-dark-violet font-bold py-2 px-4 rounded">
+                        Add to Calendar
+                      </a>
+                    </div>
+                  </div>
+                );
+              }) }
             </div>
           </section>
         </main>
