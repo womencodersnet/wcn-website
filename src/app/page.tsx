@@ -18,11 +18,11 @@ const Home = () => {
           <About />
           <section className="mx-auto md:w-1/2">
             <h3 className="section-header">What{'\''}s Happening?</h3>
-            <p className="info">
+            <p className="mb-20">
               🚧 We{'\''}re Getting Ready! Our website is currently under
               construction. 🚧
             </p>
-            <p className="info">
+            <p className="mb-20">
               Soon, it will be your go-to hub for resources, community
               interaction, and essential updates from WCN. Stay tuned for
               the launch of something great!
@@ -30,7 +30,7 @@ const Home = () => {
           </section>
           <section className="mx-auto md:w-1/2">
             <h3 className="section-header">Get Connected!</h3>
-            <p className="info">
+            <p className="mb-20">
               Join our Discord community! Connect with fellow women in tech,
               share ideas, seek support, and learn together. Our collective
               voice will shape the future of technology.
