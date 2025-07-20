@@ -20,7 +20,7 @@ export const getUpcomingEvents = async (token = '') => {
 const getCalendarItems = async (nextPageToken: string) => {
   const eventsStartDate = new Date().toISOString();
   const eventsEndDate = new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString();
-  const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${eventsStartDate}&timeMax=${eventsEndDate}&pageToken=${nextPageToken}&singleEvents=true&maxResults=10`;
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${eventsStartDate}&timeMax=${eventsEndDate}&pageToken=${nextPageToken}&singleEvents=true&maxResults=10&orderBy=startTime`;
 
   return fetch(url)
     .then(response => response.json())

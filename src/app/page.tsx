@@ -1,10 +1,57 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Link from "next/link";
-import Footer from "./components/Footer";
-import About from "./components/About";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
+import Link from 'next/link';
+import Footer from './components/Footer';
+import { getUpcomingEvents } from '@/api/calendar';
+import About from './components/About';
+
+const convertDateToGoogleFormat = (date: string) => {
+  return new Date(date).toISOString().replace(/[-/.:]+/g, '');
+};
+
+const formatToLocalTimeZone = (date: string) => {
+  const eventDate = new Date(date);
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short'
+  };
+  const formatter = new Intl.DateTimeFormat('en-US', options);
+  return formatter.format(eventDate);
+}
 
 const Home = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getUpcomingEvents();
+        console.log('events', response);
+        setEvents(response.items.slice(0, 3)); // only show first 3 events
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="landing-body">
+        <Navbar />
+        <main className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
+          <p>Loading...</p>;
+        </main>
+      </div>
+    );
+  }
   return (
     <div className="main-container landing-body font-main">
       <Navbar />
@@ -38,6 +85,29 @@ const Home = () => {
             <Link href="https://discord.gg/YpaJ3JckNM">
               <div className="join-button">Join Our Discord</div>
             </Link>
+          </section>
+          <section className="mx-auto lg:w-3/4">
+            <h3 className="section-header">Upcoming Events</h3>
+            <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-3 place-items-center align-center">
+              { events && events.map( ({ end, start, location, summary }, index ) => {
+                const link = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=${convertDateToGoogleFormat(start.dateTime)}/${convertDateToGoogleFormat(end.dateTime)}&text=${summary}&location=${location}&ctz=${start.timeZone}`;
+                return (
+                  <div key={index} className="m-4 block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
+                    <div className="p-6">
+                      <h5 className="mb-6 text-xl font-bold leading-tight">
+                        { summary }
+                      </h5>
+                      <p className="mb-6">
+                        Time: { formatToLocalTimeZone(start.dateTime) } - { formatToLocalTimeZone(end.dateTime) }
+                      </p>
+                      <a href={ link } rel="noreferer noopener" target="_blank" className="bg-leafy hover:bg-grass-green text-dark-violet font-bold py-2 px-4 rounded">
+                        Add to Calendar
+                      </a>
+                    </div>
+                  </div>
+                );
+              }) }
+            </div>
           </section>
         </main>
       </div>

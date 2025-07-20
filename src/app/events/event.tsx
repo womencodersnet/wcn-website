@@ -10,6 +10,7 @@ const Event = ({ location, startTime, endTime, link, title }: { location: string
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
+    timeZoneName: 'short'
   };
   const formatter = new Intl.DateTimeFormat('en-US', options);
   const formattedStartDate = formatter.format(eventStartDate);
@@ -30,7 +31,7 @@ const Event = ({ location, startTime, endTime, link, title }: { location: string
         <a href={link} rel="noreferer noopener" target="_blank" className="text-slate-800 font-semibold text-sm hover:underline flex items-center">
           More Info
           <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </a>
       </div>
