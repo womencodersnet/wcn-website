@@ -6,32 +6,31 @@ import About from "./components/About";
 
 const Home = () => {
   return (
-    <div className="main-container landing-body">
+    <div className="main-container landing-body font-main">
       <Navbar />
       <div className="content-container flex min-h-screen flex-col items-center justify-center p-4 text-center">
         <div className="header">
-          <h2 className="title">WCN</h2>
+          <h2 className="title text-7xl font-bold text-white">WCN</h2>
           <p className="subtitle">Women Coders Network</p>
           <hr className="hr-line" />
         </div>
-
-        <main className="main-content">
+        <main>
           <About />
-          <section className="w-dvh">
+          <section className="mx-auto md:w-1/2">
             <h3 className="section-header">What{'\''}s Happening?</h3>
-            <p className="info">
+            <p className="mb-20">
               🚧 We{'\''}re Getting Ready! Our website is currently under
               construction. 🚧
             </p>
-            <p className="info">
+            <p className="mb-20">
               Soon, it will be your go-to hub for resources, community
               interaction, and essential updates from WCN. Stay tuned for
               the launch of something great!
             </p>
           </section>
-          <section>
+          <section className="mx-auto md:w-1/2">
             <h3 className="section-header">Get Connected!</h3>
-            <p className="info">
+            <p className="mb-20">
               Join our Discord community! Connect with fellow women in tech,
               share ideas, seek support, and learn together. Our collective
               voice will shape the future of technology.

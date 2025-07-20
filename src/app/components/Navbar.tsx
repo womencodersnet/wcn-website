@@ -2,6 +2,22 @@ import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
+  const links = [{
+    name: 'About Us',
+    link: '/'
+  }, {
+    name: 'Our Community',
+    link: '/community'
+  }, {
+    name: 'Events',
+    link: '/events'
+  }, {
+    name: 'Code of Conduct',
+    link: '/conduct'
+  }, {
+    name: 'Contact Us',
+    link: '/contact-us'
+  }];
   return (
     <div className="top-0 w-full lg:relative z-50">
       <nav className="z-10 sticky top-0 left-0 right-0 px-5 py-2.5 lg:border-none lg:py-4 bg-dark-violet">
@@ -11,26 +27,10 @@ const Navbar = () => {
           </a>
           <div className="hidden lg:block">
             <ul className="flex space-x-10 text-base">
-              <li className="inline-block">
-                <Link href="/">
-                  About Us
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="/community">
-                  Our Community
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="/conduct">
-                  Code of Conduct
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="/contact-us">
-                  Contact Us
-                </Link>
-              </li>
+              { links.map(({ link, name }, index) => (
+                <li key={index} className="inline-block">
+                  <Link href={link}>{name}</Link></li>
+              ))}
             </ul>
           </div>
           <label className="lg:hidden relative z-40 cursor-pointer px-3 py-6 dark:text-white" htmlFor="mobile-menu">
@@ -40,10 +40,10 @@ const Navbar = () => {
             <div className="fixed top-0 right-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0">
               <div className="float-right min-h-full w-[85%] bg-dark-violet px-6 pt-15 shadow-2xl">
                 <menu role="list">
-                  <li className="block p-5 text-2xl active:bg-purple-900"><Link href="/">About Us</Link></li>
-                  <li className="block p-5 text-2xl active:bg-purple-900"><Link href="/community">Our Community</Link></li>
-                  <li className="block p-5 text-2xl active:bg-purple-900"><Link href="/conduct">Code of Conduct</Link></li>
-                  <li className="block p-5 text-2xl active:bg-purple-900"><Link href="/contact-us">Contact Us</Link></li>
+                  { links.map(({ link, name }, index) => (
+                    <li key={index} className="block p-5 text-2xl active:bg-purple-900">
+                      <Link href={link}>{name}</Link></li>
+                  ))}
                 </menu>
               </div>
             </div>
