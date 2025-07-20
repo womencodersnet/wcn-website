@@ -82,17 +82,13 @@ nav {
   margin: 15px 0;
 }
 
-.info {
-  margin-bottom: 20px;
-}
-
 .join-button {
   @apply bg-indigo-600 hover:bg-indigo-800 font-bold py-2 px-4 rounded-sm my-6 inline-block;
   color: #fff;
 }
 
-.formStyle{
-  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy 
+.formStyle {
+  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy
 }
 
 
