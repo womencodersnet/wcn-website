@@ -47,7 +47,7 @@ const Home = () => {
       <div className="landing-body">
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
-          <p>Loading...</p>;
+          <p>Loading...</p>
         </main>
       </div>
     );
@@ -92,7 +92,7 @@ const Home = () => {
               { events && events.map( ({ end, start, location, summary }, index ) => {
                 const link = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=${convertDateToGoogleFormat(start.dateTime)}/${convertDateToGoogleFormat(end.dateTime)}&text=${summary}&location=${location}&ctz=${start.timeZone}`;
                 return (
-                  <div key={index} className="m-4 block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
+                  <div key={index} className="m-4 block text-neutral-50 rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
                     <div className="p-6">
                       <h5 className="mb-6 text-xl font-bold leading-tight">
                         { summary }
