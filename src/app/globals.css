@@ -13,6 +13,8 @@
   --color-leafy: #C0F862;
   --color-olive-green: #195900;
   --color-dark-violet: #402B6D;
+  --font-header:'Poppins', sans-serif;
+  --font-main: 'Roboto Mono', monospace;
 }
 
 /*
