@@ -48,7 +48,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href="https://discord.gg/YpaJ3JckNM">
-            <button className="bg-dark-violet text-(--color-leafy) px-6 py-1 rounded font-bold text-xl">Join</button>
+            <button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl">Join</button>
           </Link>
           <label className="lg:hidden relative z-40 cursor-pointer px-3 py-6 dark:text-white" htmlFor="mobile-menu">
             <input className="peer hidden" type="checkbox" id="mobile-menu" />
