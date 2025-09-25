@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { getUpcomingEvents } from '@/api/calendar';
 import Event from './event';
+import Footer from '../components/Footer';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -45,6 +46,7 @@ const Events = () => {
           {events && events.map(({ id, location, start, end, htmlLink, summary }: { id: string, location: string, start: { dateTime: string }, end: { dateTime: string }, htmlLink: string, summary: string }) => <Event location={location} startTime={start.dateTime} endTime={end.dateTime} link={htmlLink} title={summary} key={id} />)}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
