@@ -46,7 +46,7 @@ const Navbar = () => {
             <ul className="flex gap-10 font-semibold text-base">
               { links.map(({ link, name }, index) => (
                 <li key={index} className="inline-block">
-                  <Link href={link}>{name == 'Join' ? joinButton : name }</Link></li>
+                  <Link href={link}>{ name }</Link></li>
               ))}
             </ul>
           </div>
