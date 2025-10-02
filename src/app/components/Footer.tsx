@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   const linkedIn = WCNInfo.linkedIn;
 
   return (
-    <footer className="w-full p-10 bg-dark-violet text-leafy font-main">
+    <footer className="w-full p-10 bg-dark-violet text-leafy">
         <div className="flex items-center justify-around max-[640px]:flex-col">
             <button className="h-min bg-leafy text-dark-violet p-2 rounded border-2 border-solid border-[#000]-800 shadow-xl text-xl font-bold max-[640px]:mb-4">
                 Our Code of Conduct
