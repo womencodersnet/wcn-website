@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <div className={`top-0 w-full lg:fixed z-50 bg-[#ffffffcf] py-4 ${!isTop ? "shadow-md" : ""}`}>
-      <nav className="z-10 sticky left-0 right-0 px-5 py-2.5 lg:border-none lg:py-4 font-(family-name:--font-header)">
+      <nav className="z-10 sticky left-0 right-0 px-5 py-2.5 lg:border-none lg:py-4 font-(family-name:--font-main)">
         <div className="flex items-center justify-around">
           <a href="/" className="flex items-center space-x-2">              
             <img className="h-10" src="/assets/WCN-SVG.svg" alt="WCN logo" />

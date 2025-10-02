@@ -14,7 +14,7 @@
   --color-olive-green: #195900;
   --color-dark-violet: #402B6D;
 
-  --font-header:'Poppins', sans-serif;
+  --font-main:'Poppins', sans-serif;
 }
 
 /*
@@ -35,11 +35,7 @@
   }
 }
 
-h5, h4, h3, h2, h1 {
-  font-family: var(--font-header);
-}
-
-p {
+body, h5, h4, h3, h2, h1 {
   font-family: var(--font-main);
 }
 
