@@ -19,17 +19,14 @@ const Navbar = () => {
     name: 'About',
     link: '/'
   }, {
-    name: 'Our Community',
-    link: '/community'
-  }, {
     name: 'Events',
     link: '/events'
+  },{
+    name: 'Resources',
+    link: '/resources'
   }, {
     name: 'Code of Conduct',
     link: '/conduct'
-  }, {
-    name: 'Contact Us',
-    link: '/contact-us'
   }];
 
   const joinButton = <Link href="https://discord.gg/YpaJ3JckNM"><button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">Join</button></Link>;

@@ -1,0 +1,60 @@
+{
+    "communities": [
+        {
+            "name": "Aspire For Her",
+            "url": "https://aspireforher.com/"
+        },
+        {
+            "name": "Baddies In Tech",
+            "url": "https://www.baddiesintech.com/"
+        },
+        {
+            "name": "Women In Tech",
+            "url" : "https://www.womentech.net/"
+        },
+        {
+            "name": "Women In Linux",
+            "url" : "https://www.womeninlinux.org/"
+        },
+        {
+            "name": "TORC",
+            "url" : "https://www.torc.dev/"
+        }
+    ],
+    "job boards" : [
+        {
+            "name": "Remote Woman",
+            "url" : "https://remotewoman.com/"
+        },
+        {
+            "name": "Hire Tech Ladies",
+            "url" : "https://www.hiretechladies.com/jobs"
+        },
+        {
+            "name": "Power To Fly",
+            "url" : "https://powertofly.com/"
+        },
+        {
+            "name": "Remote POC",
+            "url" : "https://remotepoc.com/"
+        }
+    ],
+    "advice" : [
+        {
+            "name": "Code Buddies",
+            "url" : "https://www.codebuddies.org/"
+        },
+        {
+            "name": "Code Newbie",
+            "url" : "https://www.codenewbie.org/"
+        },
+        {
+            "name": "Coding Blocks",
+            "url" : "https://www.codingblocks.net/"
+        },
+        {
+            "name": "freeCodeCamp",
+            "url" : "https://www.freecodecamp.org/learn"
+        }
+    ]
+}

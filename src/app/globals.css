@@ -39,6 +39,10 @@ body, h5, h4, h3, h2, h1 {
   font-family: var(--font-main);
 }
 
+h1,h2,h3,h4,h5{
+  font-family: var(--font-header);
+}
+
 .landing-body {
   background:#fff;
   color: var(--color-dark-violet);
@@ -47,18 +51,6 @@ body, h5, h4, h3, h2, h1 {
 
 .title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.signup-body {
-  color: rgb(var(--foreground-rgb));
-  padding: 20px;
-  /*background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));*/
-    /*color:  #84fb9695;*/
 }
 
 .section-header {
@@ -83,6 +75,10 @@ body, h5, h4, h3, h2, h1 {
 
 
 @media (max-width: 768px) {
+  .landing-body {
+     margin-top: 0;
+  }
+
   .title {
     @apply text-3xl;
   }
