@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar';
 import Starfield from '../components/Starfield';
 
 const Signup = () => {
-  const googleIcon = "../assets/google.png"
-  const discordIcon = "../assets/dicord.png"
+  const googleIcon = '../assets/google.png';
+  const discordIcon = '../assets/dicord.png';
   return (
     <div className="signup-body">
       <Navbar />

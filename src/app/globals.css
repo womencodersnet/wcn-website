@@ -14,8 +14,7 @@
   --color-olive-green: #195900;
   --color-dark-violet: #402B6D;
 
-  --font-header:'Poppins', sans-serif;
-  --font-main: 'Roboto Mono', monospace;
+  --font-main:'Poppins', sans-serif;
 }
 
 /*
@@ -36,13 +35,8 @@
   }
 }
 
-body {
+body, h5, h4, h3, h2, h1 {
   font-family: var(--font-main);
-}
-
-nav {
-  background-color: var(--color-dark-violet);
-  color: var(--color-leafy);
 }
 
 h1,h2,h3,h4,h5{
@@ -50,30 +44,13 @@ h1,h2,h3,h4,h5{
 }
 
 .landing-body {
-  background: linear-gradient(
-    to bottom right,
-    #004080,
-    #00264d,
-    #000033,
-    #000000
-  );
-  color: #fff;
+  background:#fff;
+  color: var(--color-dark-violet);
+  margin-top: 8em;
 }
 
 .title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.signup-body {
-  color: rgb(var(--foreground-rgb));
-  padding: 20px;
-  /*background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));*/
-    /*color:  #84fb9695;*/
 }
 
 .section-header {
@@ -89,8 +66,7 @@ h1,h2,h3,h4,h5{
 }
 
 .join-button {
-  @apply bg-indigo-600 hover:bg-indigo-800 font-bold py-2 px-4 rounded-sm my-6 inline-block;
-  color: #fff;
+  @apply text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer;
 }
 
 .formStyle {
@@ -99,6 +75,10 @@ h1,h2,h3,h4,h5{
 
 
 @media (max-width: 768px) {
+  .landing-body {
+     margin-top: 0;
+  }
+
   .title {
     @apply text-3xl;
   }

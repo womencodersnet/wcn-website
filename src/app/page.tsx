@@ -53,7 +53,7 @@ const Home = () => {
     );
   }
   return (
-    <div className="main-container landing-body font-main">
+    <div className="main-container landing-body">
       <Navbar />
       <div className="content-container flex min-h-screen flex-col items-center justify-center p-4 text-center">
         <div className="header">
@@ -77,14 +77,14 @@ const Home = () => {
           </section>
           <section className="mx-auto md:w-1/2">
             <h3 className="section-header">Get Connected!</h3>
-            <p className="mb-20">
-              Join our Discord community! Connect with fellow women in tech,
+            <div className="mb-20">
+              <p className="mb-6">Join our Discord community! Connect with fellow women in tech,
               share ideas, seek support, and learn together. Our collective
-              voice will shape the future of technology.
-            </p>
-            <Link href="https://discord.gg/YpaJ3JckNM">
-              <div className="join-button">Join Our Discord</div>
-            </Link>
+              voice will shape the future of technology.</p>
+              <Link href="https://discord.gg/YpaJ3JckNM">
+                <span className="join-button w-1/2">Join Our Discord</span>
+              </Link>
+            </div>
           </section>
           <section className="mx-auto lg:w-3/4">
             <h3 className="section-header">Upcoming Events</h3>
@@ -92,7 +92,7 @@ const Home = () => {
               { events && events.map( ({ end, start, location, summary }, index ) => {
                 const link = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=${convertDateToGoogleFormat(start.dateTime)}/${convertDateToGoogleFormat(end.dateTime)}&text=${summary}&location=${location}&ctz=${start.timeZone}`;
                 return (
-                  <div key={index} className="m-4 block rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
+                  <div key={index} className="m-4 block text-neutral-50 rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
                     <div className="p-6">
                       <h5 className="mb-6 text-xl font-bold leading-tight">
                         { summary }
