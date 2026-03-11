@@ -35,24 +35,18 @@ const Navbar = () => {
     },
   ];
 
-  const joinButton = (
-    <Link href="https://discord.gg/YpaJ3JckNM">
-      <button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">
-        Join
-      </button>
-    </Link>
-  );
-
   // theme state to update icon
   const [isDark, setDark] = useState(false);
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
   }, []);
-
+  
   const handleToggle = () => {
     toggleMode();
     setDark((d) => !d);
   };
+
+  const joinButton = <Link href="https://discord.gg/YpaJ3JckNM" target="_blank"><button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">Join</button></Link>;
 
   return (
     <div
