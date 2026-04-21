@@ -28,7 +28,7 @@ const Events = () => {
       <div className="landing-body">
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
-          <p>Loading...</p>;
+          <p>Loading...</p>
         </main>
       </div>
     );
