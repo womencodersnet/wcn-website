@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 
 const CodeOfConduct = () => {
-  const lastUpdated = new Date().toLocaleDateString();
+  const lastUpdated = new Date('April 21, 2026').toLocaleDateString();
   return (
     <div className="landing-body">
       <Navbar />
