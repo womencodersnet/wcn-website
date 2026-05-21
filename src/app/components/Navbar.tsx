@@ -55,6 +55,7 @@ const Navbar = () => {
     setDark((d) => !d);
   };
 
+
   return (
     <div
       className={`top-0 w-full lg:fixed z-50 bg-white dark:bg-stale py-4 ${!isTop ? "shadow-md" : ""}`}
