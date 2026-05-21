@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import Navbar from "../components/Navbar";
-import Resource from "./resource";
-import Footer from "../components/Footer";
+'use client';
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Resource from './resource';
+import Footer from '../components/Footer';
 
 const Resources = () => {
   return (

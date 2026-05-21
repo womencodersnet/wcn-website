@@ -1,5 +1,5 @@
-@import "tailwindcss" layer(base);
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import 'tailwindcss' layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @theme {
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
@@ -10,9 +10,11 @@
 
   --color-grass-green: #84fb9695;
   --color-wheat: #f2fddf;
-  --color-leafy: #c0f862;
+  --color-leafy: #C0F862;
   --color-olive-green: #195900;
   --color-dark-violet: #402b6d;
+  --color-stale: #292B2F;
+  --color-pearl:#ffffffcf;
 
   --font-main: "Poppins", sans-serif;
 }
