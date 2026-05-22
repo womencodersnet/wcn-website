@@ -1,14 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import { getUpcomingEvents } from "@/api/calendar";
-import Event from "./event";
-import Footer from "../components/Footer";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
+import { getUpcomingEvents } from '@/api/calendar';
+import Event from './event';
+import Footer from '../components/Footer';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pageToken, setPageToken] = useState("");
+  const [pageToken, setPageToken] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,8 +44,7 @@ const Events = () => {
         <p className="text-lg text-center mb-12">
           <a href="https://calendar.google.com/calendar/u/0/embed?src=7bd85d9630b008f805dfb8ac4e76bc7475c5a84b03ee80674d56beb9a461fd02@group.calendar.google.com&ctz=America/Los_Angeles&pli=1">
             Subscribe to our events calendar
-          </a>{" "}
-          to stay updated about community events.
+          </a> to stay updated about community events.
         </p>
         <div className="mx-auto w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
           {events &&
