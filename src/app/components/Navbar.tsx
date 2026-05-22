@@ -29,7 +29,7 @@ const Navbar = () => {
     link: '/conduct'
   }];
 
-  const joinButton = <Link href="https://discord.gg/YpaJ3JckNM"><button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">Join</button></Link>;
+  const joinButton = <Link href="https://discord.gg/YpaJ3JckNM" target="_blank"><button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">Join</button></Link>;
 
   return (
     <div className={`top-0 w-full lg:fixed z-50 bg-[#ffffffcf] py-4 ${!isTop ? "shadow-md" : ""}`}>
