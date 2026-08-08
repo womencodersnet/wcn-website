@@ -80,7 +80,7 @@ h1,h2,h3,h4,h5{
 
 @media (max-width: 768px) {
   .landing-body {
-    margin-top: 0;
+     margin-top: 0;
   }
 
   .title {
@@ -99,7 +99,7 @@ h1,h2,h3,h4,h5{
     @apply text-sm py-2 px-4;
   }
 
-  .signupOpt {
+  .signupOpt{
     @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
   }
 }
