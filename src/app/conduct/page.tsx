@@ -1,13 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const CodeOfConduct = () => {
-  const lastUpdated = new Date().toLocaleDateString();
+  const lastUpdated = new Date('April 21, 2026').toLocaleDateString();
   return (
     <div className="landing-body">
       <Navbar />
-      <main className="flex min-h-screen flex-col justify-center px-8 py-4">
+      <main className="flex min-h-screen flex-col justify-center p-4">
         <h1 className="text-4xl text-center font-bold">Women Coders Network (WCN) Code of Conduct</h1>
         <section className="px-7 flex flex-col gap-4">
           <p className="mt-4 text-lg">
