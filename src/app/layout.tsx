@@ -16,19 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var t = localStorage.getItem('theme');
-                if (t === 'dark') document.documentElement.classList.add('dark');
-              })();
-            `,
-          }}
-        />
-      </head>
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <body className={inter.className}>{children}</body>
     </html>
   );

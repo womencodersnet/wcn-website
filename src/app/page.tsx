@@ -80,7 +80,7 @@ const Home = () => {
               { events && events.map( ({ end, start, location, summary }, index ) => {
                 const link = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=${convertDateToGoogleFormat(start.dateTime)}/${convertDateToGoogleFormat(end.dateTime)}&text=${summary}&location=${location}&ctz=${start.timeZone}`;
                 return (
-                  <div key={index} className="m-4 block text-neutral-50 rounded-lg bg-dark-violet dark:bg-leafy shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
+                  <div key={index} className="m-4 block text-neutral-50 rounded-lg bg-dark-violet shadow-secondary-1 dark:bg-surface-dark dark:text-dark-violet text-surface">
                     <div className="p-6">
                       <h5 className="mb-6 text-xl font-bold leading-tight">
                         { summary }
@@ -88,7 +88,7 @@ const Home = () => {
                       <p className="mb-6">
                         Time: { formatToLocalTimeZone(start.dateTime) } - { formatToLocalTimeZone(end.dateTime) }
                       </p>
-                      <a href={ link } rel="noreferer noopener" target="_blank" className="bg-leafy dark:bg-dark-violet hover:bg-grass-green text-dark-violet dark:text-leafy font-bold py-2 px-4 rounded">
+                      <a href={ link } rel="noreferer noopener" target="_blank" className="bg-leafy hover:bg-grass-green text-dark-violet font-bold py-2 px-4 rounded">
                         Add to Calendar
                       </a>
                     </div>

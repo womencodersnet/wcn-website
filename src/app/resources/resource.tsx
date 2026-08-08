@@ -21,7 +21,7 @@ const Resource = () => {
     <div className="lg:flex gap-8 justify-between">
       {dataList.map(([categoryName, resource]) => (
         <div className="flex flex-col gap-5 items-center" key={categoryName}>
-          <h4 className="text-lg text-center font-bold capitalize dark:text-(--color-wheat)">{categoryName}</h4>
+          <h4 className="text-lg text-center font-bold capitalize">{categoryName}</h4>
           <div className="flex flex-col gap-10">
             {resource.map((res: Resource) => (
               <div className="flex flex-col gap-5 w-xs px-6 py-5 bg-(--color-dark-violet) rounded-xl" key={res.name}>

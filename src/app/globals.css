@@ -12,11 +12,9 @@
   --color-wheat: #f2fddf;
   --color-leafy: #C0F862;
   --color-olive-green: #195900;
-  --color-dark-violet: #402b6d;
-  --color-stale: #292B2F;
-  --color-pearl:#ffffffcf;
+  --color-dark-violet: #402B6D;
 
-  --font-main: "Poppins", sans-serif;
+  --font-main:'Poppins', sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -54,17 +52,6 @@ h3,
 h4,
 h5 {
   font-family: var(--font-header);
-}
-
-/* light/dark backgrounds */
-body {
-  @apply bg-white text-dark-violet;
-}
-
-.dark body {
-  /* dark specific colours */
-  background: #292b2f;
-  color: #fff;
 }
 
 .landing-body {
