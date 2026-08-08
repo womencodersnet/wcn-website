@@ -17,8 +17,6 @@
   --font-main:'Poppins', sans-serif;
 }
 
-@custom-variant dark (&:is(.dark *));
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -37,25 +35,16 @@
   }
 }
 
-body,
-h5,
-h4,
-h3,
-h2,
-h1 {
+body, h5, h4, h3, h2, h1 {
   font-family: var(--font-main);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1,h2,h3,h4,h5{
   font-family: var(--font-header);
 }
 
 .landing-body {
-  background: #fff;
+  background:#fff;
   color: var(--color-dark-violet);
   margin-top: 8em;
 }
