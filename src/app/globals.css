@@ -49,11 +49,6 @@ h1,h2,h3,h4,h5{
   margin-top: 8em;
 }
 
-.dark .landing-body {
-  background: #292b2f;
-  color: #fff;
-}
-
 .title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
