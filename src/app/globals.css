@@ -75,7 +75,7 @@ h1,h2,h3,h4,h5{
 }
 
 .formStyle {
-  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy;
+  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy
 }
 
 @media (max-width: 768px) {
@@ -100,6 +100,6 @@ h1,h2,h3,h4,h5{
   }
 
   .signupOpt {
-    @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2;
+    @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
   }
 }

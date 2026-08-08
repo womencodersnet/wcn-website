@@ -31,7 +31,6 @@ const Navbar = () => {
 
   const joinButton = <Link href="https://discord.gg/YpaJ3JckNM" target="_blank"><button className="text-dark-violet bg-(--color-leafy) px-6 py-1 rounded font-bold text-xl hover:cursor-pointer">Join</button></Link>;
 
-
   return (
     <div className={`top-0 w-full lg:fixed z-50 bg-[#ffffffcf] py-4 ${!isTop ? "shadow-md" : ""}`}>
       <nav className="z-10 sticky left-0 right-0 px-5 py-2.5 lg:border-none lg:py-4 font-(family-name:--font-main)">
