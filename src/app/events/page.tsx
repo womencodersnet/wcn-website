@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pageToken, setPageToken] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,8 +44,8 @@ const Events = () => {
         <div className="max-w-4xl mx-auto">
           { !events.length && <p className="text-center text-md">No upcoming events found</p> }
           { events 
-            && events.map(({ id, location, start, end, htmlLink, summary }: { id: string, location: string, start: { dateTime: string }, end: { dateTime: string }, htmlLink: string, summary: string }) => {
-            return <Event location={location} startTime={start.dateTime} endTime={end.dateTime} link={htmlLink} title={summary} key={id} />})
+            && events.map(({ id, location, start, end, htmlLink, summary }: { id: string, location: string, start: { date: string, dateTime?: string }, end: { date: string, dateTime?: string }, htmlLink: string, summary: string }) => {
+            return <Event location={location} startTime={ start.dateTime || start.date } endTime={ end.dateTime || end.date } link={htmlLink} title={summary} key={id} />})
           }
         </div>
       </main>
