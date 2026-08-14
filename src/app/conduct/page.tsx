@@ -67,6 +67,7 @@ const CodeOfConduct = () => {
           </article>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
