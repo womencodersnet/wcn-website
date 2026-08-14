@@ -16,7 +16,7 @@
   --color-stale: #292B2F;
   --color-pearl:#ffffffcf;
 
-  --font-main: "Poppins", sans-serif;
+  --font-main: 'Poppins', sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
