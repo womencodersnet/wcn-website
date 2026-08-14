@@ -1,20 +1,10 @@
 import React from 'react';
+import { formatToLocalTimeZone } from '../utilities/formatToLocalTimeZone';
 
 const Event = ({ location, startTime, endTime, link, title }: { location: string, startTime: string, endTime: string, link: string, title: string }) => {
 
-  const eventStartDate = new Date(startTime);
-  const eventEndDate = new Date(endTime);
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    timeZoneName: 'short'
-  };
-  const formatter = new Intl.DateTimeFormat('en-US', options);
-  const formattedStartDate = formatter.format(eventStartDate);
-  const formattedEndDate = formatter.format(eventEndDate);
+  const formattedStartDate = formatToLocalTimeZone(startTime);
+  const formattedEndDate = formatToLocalTimeZone(endTime);
 
   return (
     <div className="relative flex flex-col my-6 bg-leafy shadow-sm border border-slate-200 rounded-lg p-6">
