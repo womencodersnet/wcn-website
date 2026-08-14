@@ -32,7 +32,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await getUpcomingEvents();
-        console.log('events', response);
+
         setEvents(response.items.slice(0, 3)); // only show first 3 events
       } finally {
         setLoading(false);
