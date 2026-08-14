@@ -10,23 +10,23 @@ const Footer: React.FC = () => {
   const linkedIn = WCNInfo.linkedIn;
 
   return (
-    <footer className="w-full p-10 bg-white text-dark-violet">
+    <footer className="w-full p-10 text-dark-violet">
         <div className="flex items-center justify-around max-[640px]:flex-col">
-            <button onClick={() => window.location.href = '/conduct'} className="h-min bg-leafy text-dark-violet cursor-pointer p-2 rounded border-2 border-solid border-[#000]-800 shadow-xl text-xl font-bold max-[640px]:mb-4">
+            <button onClick={() => window.location.href = '/conduct'} className="button">
                 Our Code of Conduct
             </button>
             <div className="flex flex-col items-start gap-2 max-[640px]:items-center">
-                <h3 className="text-2xl font-bold">Contact Us</h3>
-                <a className="flex gap-2 items-center" href={`mailto:${email}`}>
+                <h3 className="text-2xl font-bold dark:text-(--color-leafy)">Contact Us</h3>
+                <a className="flex gap-2 items-center dark:text-(--color-wheat)" href={`mailto:${email}`}>
                     <IoMdMail /> { email }
 
                 </a>
-                <a className="flex gap-2 items-center" href={linkedIn} target="_blank" rel="noreferrer">
+                <a className="flex gap-2 items-center dark:text-(--color-wheat)" href={linkedIn} target="_blank" rel="noreferrer">
                     <FaLinkedin /> WCN Linkedin
                 </a>
             </div>
         </div> 
-      <p className="relative bottom-[-2em] text-center">&copy; All rights reserved. Women Coders Network {year}</p>
+      <p className="relative bottom-[-2em] text-center dark:text-(--color-leafy)">&copy; All rights reserved. Women Coders Network {year}</p>
     </footer>
   );
 };

@@ -5,7 +5,7 @@ import Resource from './resource';
 import Footer from '../components/Footer';
 
 const Resources = () => {
-
+  
   return (
     <div className="landing-body">
       <Navbar />

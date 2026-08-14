@@ -82,7 +82,7 @@ const Home = () => {
               share ideas, seek support, and learn together. Our collective
               voice will shape the future of technology.</p>
               <Link href="https://discord.gg/YpaJ3JckNM">
-                <span className="join-button w-1/2">Join Our Discord</span>
+                <span className="button w-1/2">Join Our Discord</span>
               </Link>
             </div>
           </section>
