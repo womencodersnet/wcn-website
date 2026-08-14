@@ -12,10 +12,14 @@
   --color-wheat: #f2fddf;
   --color-leafy: #C0F862;
   --color-olive-green: #195900;
-  --color-dark-violet: #402B6D;
+  --color-dark-violet: #402b6d;
+  --color-stale: #292B2F;
+  --color-pearl:#ffffffcf;
 
-  --font-main:'Poppins', sans-serif;
+  --font-main: 'Poppins', sans-serif;
 }
+
+@custom-variant dark (&:is(.dark *));
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -35,18 +39,43 @@
   }
 }
 
-body, h5, h4, h3, h2, h1 {
+body,
+h5,
+h4,
+h3,
+h2,
+h1 {
   font-family: var(--font-main);
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--font-header);
 }
 
+/* light/dark backgrounds */
+body {
+  @apply bg-white text-dark-violet;
+}
+
+.dark body {
+  /* dark specific colours */
+  background: #292b2f;
+  color: #fff;
+}
+
 .landing-body {
-  background:#fff;
+  background: #fff;
   color: var(--color-dark-violet);
   margin-top: 8em;
+}
+
+.dark .landing-body {
+  background: #292b2f;
+  color: #fff;
 }
 
 .title {
@@ -70,12 +99,12 @@ h1,h2,h3,h4,h5{
 }
 
 .formStyle {
-  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy
+  @apply w-full h-full p-4 my-2 text-start border-2 rounded-sm focus:bg-wheat focus:outline-hidden focus:border-leafy;
 }
 
 @media (max-width: 768px) {
   .landing-body {
-     margin-top: 0;
+    margin-top: 0;
   }
 
   .title {
@@ -94,7 +123,7 @@ h1,h2,h3,h4,h5{
     @apply text-sm py-2 px-4;
   }
 
-  .signupOpt{
-    @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2
+  .signupOpt {
+    @apply w-12 m-4 border-green-700 border-4 shadow-md rounded-full p-2;
   }
 }

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full p-10 text-dark-violet">
         <div className="flex items-center justify-around max-[640px]:flex-col">
-            <button className="h-min bg-leafy text-dark-violet p-2 rounded border-2 border-solid border-[#000]-800 shadow-xl text-xl font-bold max-[640px]:mb-4">
+            <button onClick={() => window.location.href = '/conduct'} className="h-min bg-leafy text-dark-violet cursor-pointer p-2 rounded border-2 border-solid border-[#000]-800 shadow-xl text-xl font-bold max-[640px]:mb-4">
                 Our Code of Conduct
             </button>
             <div className="flex flex-col items-start gap-2 max-[640px]:items-center">
