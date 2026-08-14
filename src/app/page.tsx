@@ -101,8 +101,7 @@ const Home = () => {
               : (
                 <div>
                   <p>No Upcoming Events. </p>
-                  <p>Subscribe to <a href="https://calendar.google.com/calendar/u/0/embed?src=7bd85d9630b008f805dfb8ac4e76bc7475c5a84b03ee80674d56beb9a461fd02@group.calendar.google.com&ctz=America/Los_Angeles&pli=1">our events calendar</a> to stay updated about community events.
-       our calendar for up-to-date information.</p>
+                  <p>Subscribe to <a href="https://calendar.google.com/calendar/u/0/embed?src=7bd85d9630b008f805dfb8ac4e76bc7475c5a84b03ee80674d56beb9a461fd02@group.calendar.google.com&ctz=America/Los_Angeles&pli=1">our events calendar</a> to stay updated about community events.</p>
                 </div>
               )
             }
