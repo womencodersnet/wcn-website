@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const CodeOfConduct = () => {
   const lastUpdated = new Date('April 21, 2026').toLocaleDateString();
