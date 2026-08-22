@@ -1,14 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import { getUpcomingEvents } from "@/api/calendar";
-import Event from "./event";
-import Footer from "../components/Footer";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
+import { getUpcomingEvents } from '@/api/calendar';
+import Event from './event';
+import Footer from '../components/Footer';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pageToken, setPageToken] = useState("");
+  const [pageToken, setPageToken] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
